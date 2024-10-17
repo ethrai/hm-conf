@@ -5,12 +5,6 @@
     mouse_mode false
     pane_frames false
     simplified_ui true
-    theme "tokyo-night-storm"
-    ui {
-    	pane_frames {
-    		rounded_corners true
-    	}
-    }
 
     keybinds {
         normal clear-defaults=true  {

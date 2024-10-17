@@ -40,18 +40,19 @@
 
   services.xremap = {
     withGnome = true;
-    config = {
-      modmap = [
-        {
-          name = "default";
-          remap = {
-            capslock = {
-              held = "leftctrl";
-              alone = "esc";
-            };
-          };
-        }
-      ];
-    };
+    yamlConfig = ''
+      modmap:
+        remap: # Required
+          # Replace a key with another
+          capslock:
+            held: c_r # Required, also accepts arrays
+            alone: escape # Required, also accepts arrays
+          shift_r:
+            press: { launch: ["setxkbmap", "ru"] } # Required
+            release: { launch: ["setxkbmap", "ru"] } # Required
+          shift_l:
+            press: { launch: ["setxkbmap", "us"] } # Required
+            release: { launch: ["setxkbmap", "us"] } # Required
+      '';
   };
 }

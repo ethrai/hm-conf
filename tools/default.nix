@@ -22,13 +22,9 @@
     curl
     wget
     httpie
-    ffmpeg
-    gcc
     lazygit
     mdcat
-    gh
-    docker
-    zip
+    zip 
     unzip
 
     #
@@ -72,7 +68,6 @@
     spring-boot-cli
     gradle
     maven
-    lombok
 
   ];
 }

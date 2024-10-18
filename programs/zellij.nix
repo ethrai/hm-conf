@@ -5,6 +5,7 @@
     mouse_mode false
     pane_frames false
     simplified_ui true
+    theme "gruvbox-dark"
 
     keybinds {
         normal clear-defaults=true  {

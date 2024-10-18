@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./tools
+    ./programs
   ];
   home.username = "sergio";
   home.homeDirectory = "/home/sergio";
@@ -28,7 +28,9 @@
     GOROOT = "${pkgs.go}/share/go";
   };
 
-  home.sessionPath = [ ];
+  home.sessionPath = [
+    "$HOME/go/bin"
+  ];
 
   programs.home-manager.enable = true;
 
@@ -41,13 +43,6 @@
             capslock:
               held: leftctrl # Required, also accepts arrays
               alone: esc # Required, also accepts arrays
-            shift_l:
-              press: { launch: ["setxkbmap", "us"] } # Required
-              release: { launch: ["setxkbmap", "us"] } # Required
-
-            shift_r:
-              press: { launch: ["setxkbmap", "ru"] } # Required
-              release: { launch: ["setxkbmap", "ru"] } # Required
     '';
   };
 }

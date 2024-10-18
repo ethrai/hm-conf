@@ -3,6 +3,10 @@
     enable = true;
     userEmail = "ryzhkosergej@gmail.com";
     userName = "Sergei Ryzhko";
-    extraConfig = { core = { editor = "code"; }; };
+    extraConfig = {
+      core = {
+        editor = "vim";
+      };
+    };
   };
 }

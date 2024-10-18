@@ -1,21 +1,15 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   imports = [
-    ./fd.nix
-    ./bat.nix
-    ./fzf.nix
-    ./git.nix
-    ./btop.nix
-    ./yazi.nix
-    ./eza.nix
-    ./ytdlp.nix
-    ./direnv.nix
+    ./alacritty
+
+    ./shell.nix
     ./zellij.nix
-    ./zoxide.nix
-    ./fish.nix
+    ./direnv.nix
+    ./git.nix
   ];
 
   home.packages = with pkgs; [
-    # fancy cli tools
     jq
     ripgrep
     fd
@@ -23,22 +17,17 @@
     wget
     httpie
     lazygit
-    mdcat
-    zip 
+    zip
     unzip
 
-    #
-    
-    
-    # kubernetes
     kubectl
     kubernetes
     kind
     kustomize
     pgcli
-    
+
     nasm
-    # golang, could be in dev template (Flake)
+    # golang, could be in dev template
     go
     gopls
     gotools
